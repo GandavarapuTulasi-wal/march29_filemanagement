@@ -25,21 +25,24 @@ function FolderContents() {
   }
 
   return (
-    <ol className="card-container">
-      {files.map((val, index) => (
-        <div className="list-values">
-          <li className="item">{val}</li>
-          <button
-            className="delete"
-            onClick={() => {
-              deleteFile(val);
-            }}
-          >
-            Delete
-          </button>
-        </div>
-      ))}
-    </ol>
+    <div>
+      <h1>Files</h1>
+      <ol className="card-container">
+        {files.map((val, index) => (
+          <div className="list-values">
+            <li className="item">{val}</li>
+            <button
+              className="delete"
+              onClick={() => {
+                deleteFile(val);
+              }}
+            >
+              Delete
+            </button>
+          </div>
+        ))}
+      </ol>
+    </div>
   );
 }
 export default FolderContents;
